@@ -2,9 +2,9 @@ import { TwitterApi } from "twitter-api-v2";
 import dotenv from "dotenv";
 dotenv.config();
 
-export async function POST(req: Request) {
+export async function GET(req: Request) {
   try {
-    if (req.method !== "POST") {
+    if (req.method !== "GET") {
       return new Response(JSON.stringify({ error: "Method not allowed" }), {
         status: 405,
       });
