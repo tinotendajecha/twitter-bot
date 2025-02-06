@@ -12,16 +12,13 @@ export async function GET(req: Request) {
 
     // const { tweet } = await req.json();
 
-      const tweet = `
-            Another giveaway today crypto fam
+    const tweet = `
+            Another giveaway today crypto fam \n\n1 $sol giveaway fam 🫡 \n\ntag 2 friends for better chance \n\nLFG!! WINNER IN 2 HRS🏆`;
 
-            1 $sol giveaway fam 🫡
-
-            Like and RT and drop addy
-
-            Must be following and tag 2 friends for better chance
-
-            LFG!! WINNER IN 2 HRS🏆`
+    // Clean the tweet text
+    const cleanedTweet = tweet
+      .trim() // Remove leading and trailing whitespace
+      .replace(/\s+/g, " "); // Replace multiple spaces with a single space
 
     if (!tweet) {
       return new Response(JSON.stringify({ error: "Please provide tweet!" }), {
@@ -41,10 +38,9 @@ export async function GET(req: Request) {
     return new Response(JSON.stringify({ message: "Tweet success!", data }), {
       status: 200,
     });
-
   } catch (error) {
     if (error instanceof Error) {
-      console.error('Error details:', {
+      console.error("Error details:", {
         message: error.message,
         code: (error as any).code,
         status: (error as any).status,
@@ -52,13 +48,19 @@ export async function GET(req: Request) {
         data: (error as any).data,
       });
       return new Response(
-        JSON.stringify({ message: 'Internal server error!', error: error.message }),
+        JSON.stringify({
+          message: "Internal server error!",
+          error: error.message,
+        }),
         { status: 500 }
       );
     } else {
-      console.error('Unexpected error:', error);
+      console.error("Unexpected error:", error);
       return new Response(
-        JSON.stringify({ message: 'Internal server error!', error: 'Unexpected error' }),
+        JSON.stringify({
+          message: "Internal server error!",
+          error: "Unexpected error",
+        }),
         { status: 500 }
       );
     }
