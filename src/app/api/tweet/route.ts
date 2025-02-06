@@ -10,7 +10,9 @@ export async function POST(req: Request) {
       });
     }
 
-    const { tweet } = await req.json();
+    // const { tweet } = await req.json();
+
+      const tweet = 'Hello from the X API 👋 using Cron Job!'
 
     if (!tweet) {
       return new Response(JSON.stringify({ error: "Please provide tweet!" }), {
