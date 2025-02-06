@@ -12,7 +12,16 @@ export async function GET(req: Request) {
 
     // const { tweet } = await req.json();
 
-      const tweet = 'Hello from the X API 👋 using Cron Job!'
+      const tweet = `
+            Another giveaway today crypto fam
+
+            1 $sol giveaway fam 🫡
+
+            Like and RT and drop addy
+
+            Must be following and tag 2 friends for better chance
+
+            LFG!! WINNER IN 2 HRS🏆`
 
     if (!tweet) {
       return new Response(JSON.stringify({ error: "Please provide tweet!" }), {
