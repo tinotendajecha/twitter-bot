@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🐦 Twitter Engagement Bot  
 
-## Getting Started
+This is a **Twitter bot** designed for **engagement farming**, leveraging **cron jobs** to schedule and post tweets automatically. The bot runs on **Vercel** and ensures that tweets are posted at optimal times for maximum reach and interaction.  
 
-First, run the development server:
+## 🚀 Features  
+✅ **Automated Tweet Scheduling** – Uses cron jobs to post tweets at set intervals.  
+✅ **Engagement Optimization** – Posts at high-traffic hours to maximize likes, retweets, and replies.  
+✅ **Customizable Tweet Content** – Easily configure tweets for memes, market updates, or any viral content.  
+✅ **Serverless & Free Deployment** – Runs on **Vercel cron jobs**, meaning no need for a dedicated server.  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠️ How It Works  
+1. Tweets are pre-defined or dynamically generated.  
+2. A cron job (configured in `vercel.json`) schedules the bot to post at **7 AM and at 4 PM CAT daily**.  
+3. The bot triggers the `/api/tweet` and `/api/jobs_tweet` endpoint to send the tweet via the Twitter API.  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Setup Instructions  
+1. **Clone the repo**  
+   ```bash
+   git clone https://github.com/tinotendajecha/twitter-bot.git
+   cd twitter-engagement-bot
+   ```  
+2. **Install dependencies**  
+   ```bash
+   npm install
+   ```  
+3. **Set up environment variables** (in `.env` file):  
+   ```
+   TWITTER_API_KEY=your_api_key
+   TWITTER_API_SECRET=your_api_secret
+   TWITTER_ACCESS_TOKEN=your_access_token
+   TWITTER_ACCESS_SECRET=your_access_secret
+   ```  
+4. **Deploy to Vercel**  
+   ```bash
+   vercel
+   ```  
+5. **Verify cron job settings** (`vercel.json`):  
+   ```json
+   {
+     "path": "/api/jobs_tweet",
+     "schedule": "0 14 * * *"
+   }
+   ```  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🤖 Future Improvements  
+- Add **AI-generated** tweets using GPT models.  
+- Implement **reply automation** for more engagement.  
+- Fetch **trending topics** and tailor tweets dynamically.  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔥 **Made for CT (Crypto Twitter) & beyond** – maximize engagement while you sleep! 🚀  
