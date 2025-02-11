@@ -13,7 +13,7 @@ export async function GET(req: Request) {
     // const { tweet } = await req.json();
 
     const tweet = `
-            I'm Hiring!!!! \n\nLooking for Web3 Enthusiasts to join my team on a new project \n\nSalary: $200 - $350 Weekly\n\nInterested?  leave a comment below on which aspect you're good at \n\nI'll dm you personally\n\nNo experience required \n\nRemote 4 - 6 hours daily required\n\nLike, RT & turn on 🔔
+           Hiring!!!! \n\nLooking for Web3 Enthusiasts to join my team on a new project \n\nSalary: $200 - $350 Weekly\n\nInterested?  leave a comment below on which aspect you're good at \n\nI'll dm you n\nNo experience required \n\nRemote 4 - 6 hrs daily required\n\nLike, RT & turn on🔔
     `;
 
     // Clean the tweet text
