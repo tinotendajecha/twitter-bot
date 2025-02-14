@@ -13,7 +13,7 @@ export async function GET(req: Request) {
     // const { tweet } = await req.json();
 
     const tweet = `
-            Another giveaway today crypto fam \n\n1 $sol giveaway fam 🫡 \n\ntag 2 friends for better chance \n\nLFG!! WINNER IN 2 HRS🏆`;
+            Give away to my most loyal followers \n\n5 $sol giveaway fam 🫡 \n\nLike, RT and tag 2 friends for better chance  \n\nMust be following \n\nLFG!! WINNER IN 24 HRS🏆`;
 
     // Clean the tweet text
     const cleanedTweet = tweet
