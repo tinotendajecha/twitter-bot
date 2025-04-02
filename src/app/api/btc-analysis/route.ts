@@ -12,12 +12,11 @@ export async function GET(req: Request) {
 
     // const { tweet } = await req.json();
 
+    // API Calls for invoking LLM and BTC Analysis
+    const coin_gecko_api_key = process.env.COINGECKO_API_KEY; 
+
     const tweet = `
-           Do you have a business idea and need software for it? \n\n
-
-           Let me build you a prototype / mvp for your project in the shortest time possible with the cheapest budget so you can pitch to investors or potential clients fast \n\n
-
-           Direct message me and let's work, ty <3
+           
     `;
 
     // Clean the tweet text

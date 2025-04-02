@@ -13,7 +13,15 @@ export async function GET(req: Request) {
     // const { tweet } = await req.json();
 
     const tweet = `
-            Give away to my most loyal followers \n\n5 $sol giveaway fam 🫡 \n\nLike, RT and tag 2 friends for better chance  \n\nMust be following \n\nLFG!! WINNER IN 24 HRS🏆`;
+      I am running a tech community where I mentor and do FREE one on one sessions on all coding stuff \n\n
+
+      - Web development - React and NextJs\n
+      - Low code web development (Xano)\n
+      - Data Science\n
+      - Automation using AI frameworks - n8n, Lang Graph\n\n
+
+      drop comment and I will share tg link\n        
+    `;
 
     // Clean the tweet text
     const cleanedTweet = tweet
