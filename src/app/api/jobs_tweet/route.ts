@@ -15,9 +15,9 @@ export async function GET(req: Request) {
     const tweet = `
            Do you have a business idea and need software for it? \n\n
 
-           Let me build you a prototype / mvp for your project in the shortest time possible with the cheapest budget so you can pitch to investors or potential clients fast \n\n
+           I'll build you a prototype / mvp for you in the shortest time possible with the cheapest budget so you can pitch to investors or potential clients fast \n\n
 
-           Direct message me and let's work, ty <3
+           DM and let's work, ty <3
     `;
 
     // Clean the tweet text
