@@ -20,7 +20,7 @@ export async function GET(req: Request) {
       - Data Science\n
       - AI Automation - n8n, Lang Graph\n\n
 
-      drop comment and I will share tg link\n        
+      drop comment and I'll share tg link\n        
     `;
 
     // Clean the tweet text
