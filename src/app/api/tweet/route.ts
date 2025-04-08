@@ -16,9 +16,9 @@ export async function GET(req: Request) {
       I am running a tech community where I mentor and do FREE one on one sessions on all coding stuff \n\n
 
       - Web development - React and NextJs\n
-      - Low code API development (Xano)\n
+      - Low code dev\n
       - Data Science\n
-      - Automation using AI frameworks - n8n, Lang Graph\n\n
+      - AI Automation - n8n, Lang Graph\n\n
 
       drop comment and I will share tg link\n        
     `;
